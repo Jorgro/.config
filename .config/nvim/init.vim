@@ -137,8 +137,8 @@ let mapleader=" "
     map <Leader>ff <CMD>Telescope find_files prompt_prefix=🔍<CR>
     map <Leader>fh <CMD>Telescope find_files find_command=rg,--files,/home/ prompt_prefix=🔍<CR>
     map <Leader>fz <CMD>Telescope find_files find_command=rg,--hidden,--files prompt_prefix=🔍<CR>
-    map <Leader>fg <CMD>Telescope git_files prompt_prefix=🔍<CR>
-    map <Leader>fc <CMD>Telescope live_grep prompt_prefix=🔍<CR>
+    map <Leader>fg <CMD>Telescope git_files prompt_prefix=🔍 <CR>
+    map <Leader>fc <CMD>Telescope live_grep prompt_prefix=🔍 <CR>
     map <leader>fl <CMD>NvimTreeToggle<cr><bar><CMD>NvimTreeToggle<CR><bar><CMD>NvimTreeToggle<CR>
     map <Leader>fb <CMD>Telescope buffers<CR>
 
@@ -513,12 +513,8 @@ let mapleader=" "
 
     function! s:oftenUsed()
         let files = [
-            \ {'line': 'TODO', 'cmd': 'edit $HOME/Documents/TODO.md'},
-            \ {'line': 'IN3050', 'cmd': 'cd $HOME/Documents/School/IN3050/'},
-            \ {'line': 'IN3030', 'cmd': 'cd $HOME/Documents/School/IN3030/'},
-            \ {'line': 'IN3020', 'cmd': 'cd $HOME/Documents/School/IN3020/'},
-            \ {'line': 'Neovim', 'cmd': 'cd $HOME/.config/nvim/'},
-            \ {'line': 'Kattis', 'cmd': 'cd $HOME/Documents/Personal/KattisSolutions'},
+            \ {'line': 'rdv_pipeline', 'cmd': 'cd $HOME/Code/RevolveNTNU/rdv_pipeline'},
+            \ {'line': 'DV_ACU', 'cmd': 'cd $HOME/Code/RevolveNTNU/DV_ACU'},
         \]
         return files
     endfunction
@@ -535,7 +531,7 @@ let mapleader=" "
 
     let g:startify_lists = [
     \ { 'type': 'files', 'header': ['   Recent'] },
-    \ { 'type': function('s:oftenUsed'), 'header': ['   Often used'], 'indices': ['todo', '3050', '3030', '3020'] },
+    \ { 'type': function('s:oftenUsed'), 'header': ['   Often used'], 'indices': ['rdv', 'acu']},
     \ { 'type': function('s:configFiles'), 'header': ['   Config files'], 'indices': ['cv', 'cb', 'ca', 'ci', 'cr', 'ck', 'cp', 'co'] },
     \ { 'type': 'commands', 'header': ['   Commands'], 'indices': ['cs', 'pu'] },
     \ { 'type': function('s:luaFiles'), 'header': ['   Lua files'] },
