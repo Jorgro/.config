@@ -14,6 +14,7 @@ let mapleader=" "
 
         "Movement"
         Plug 'psliwka/vim-smoothie'
+        Plug 'christoomey/vim-tmux-navigator'
 
         "Syntax highlighting"
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -36,6 +37,8 @@ let mapleader=" "
         Plug 'kyazdani42/nvim-tree.lua'
 
         "Menus"
+        Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+        Plug 'nvim-telescope/telescope-media-files.nvim'
         Plug 'nvim-telescope/telescope.nvim'
         Plug 'mhinz/vim-startify'
         Plug 'spinks/vim-leader-guide'
